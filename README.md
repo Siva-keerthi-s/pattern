@@ -24,3 +24,38 @@ int i,j,k,y,row = 4,column = 4,num = 1;
     }
     return 0;
 {
+
+#include <iostream>
+using namespace std;
+int main(){
+    int i,j,k,row = 5,column = 5,num = 1;
+    for(i = 0; i<row; i++){
+        for(j  = 0; j< column - i; j++){
+            cout << " ";
+        }
+        cout <<"*";
+        if (i != 0){ 
+          for(j = 0 ; j < 2 * i - 1; j++){ 
+            cout << " ";
+          }
+          cout << "*";
+        }
+        cout <<"\n";
+    }
+    for(i = 0; i< column-1; i++){
+        for(j  = 0; j <= i+1; j++){
+            cout << " ";
+        }
+        cout << "*";
+        if (i != (column-2)){ 
+          for(j = 0 ; j < 2 * (column-i) - 5; j++){ 
+            cout << " ";
+          }
+          cout << "*";
+        }
+        cout <<"\n";
+    }
+    return 0;
+}
+
+
