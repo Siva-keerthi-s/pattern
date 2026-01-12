@@ -24,7 +24,7 @@ int i,j,k,y,row = 4,column = 4,num = 1;
     }
     return 0;
 {
-
+// Hallo Diamond
 #include <iostream>
 using namespace std;
 int main(){
@@ -57,5 +57,59 @@ int main(){
     }
     return 0;
 }
+/* Butterfly pattern
+   
+   *               *
+   * *           * *
+   * * *       * * *
+   * * * * * * * * *  
+   * * * * * * * * *
+   * * *       * * *
+   * *           * *          
+   *               *
+
+*/
+#include <iostream>
+using namespace std;
+int main(){
+    int i,j,n;
+    cout << "enter the value of n(n = row = column) : " << endl;
+    cin >> n;
+    for(i = 0; i<n; i++){
+      for (j = 0; j<=i; j++){
+        cout << "*";
+      }
+      for(j = 0; j < n -i-1; j++){
+        cout << " ";
+      }
+      for(j = 0; j < n-i-1; j++){
+        cout << " ";
+      }
+      for(j = 0; j<=i; j++ ){
+        cout << "*";
+      }
+      cout << endl;
+    }
+    for(i = 0; i<n; i++){
+      for (j = 0; j < n-i ; j++){
+        cout << "*";
+      }
+      for(j = i; j>0; j--){
+        cout << " ";
+      }
+      if(i != 0){
+        for(j = 0; j<i; j++){
+          cout << " ";
+        }
+      }
+      for(j = 0; j < n-i ; j++ ){
+        cout << "*";
+
+      }
+      cout << endl;
+    }
+    return 0;
+}
+
 
 
